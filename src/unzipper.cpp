@@ -82,7 +82,7 @@ namespace ziputils
         if (isOpen())
         {
             closeEntry();
-            int err = unzLocateFile(zipFile_, filename.data(), nullptr);
+            int err = unzLocateFile(zipFile_, filename.data(), 0);
             if (err == UNZ_OK)
             {
                 if (!password.empty())
